@@ -1,7 +1,17 @@
 #include "PhoneBook.hpp"
 #include <iostream>
 #include <string>
-#include <cstdlib>  // Para usar atoi
+#include <cstdlib>
+#include <cctype>
+
+bool isNumber(const std::string& str) {
+    for (size_t i = 0; i < str.length(); i++) {
+        if (!isdigit(str[i])) {
+            return false;
+        }
+    }
+    return true;
+}
 
 int main() {
     PhoneBook phoneBook;
@@ -43,10 +53,13 @@ int main() {
             std::cout << "Enter index: ";
             std::getline(std::cin, indexInput);
 
-            // Usar atoi para converter a string em um inteiro
+            if (!isNumber(indexInput)) {
+                std::cout << "Invalid index! Please enter a number." << std::endl;
+                continue;
+            }
+
             int index = atoi(indexInput.c_str());
 
-            // Verificar se o índice é válido
             if (index >= 0 && index < phoneBook.getContactCount()) {
                 phoneBook.displayContactDetails(index);
             } else {
