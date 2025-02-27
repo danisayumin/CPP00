@@ -1,20 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Contact.cpp                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: danielasayuminitta <danielasayuminitta@    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:50:40 by danielasayu       #+#    #+#             */
-/*   Updated: 2025/02/24 18:03:49 by danielasayu      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Contact.hpp"
 
 Contact::Contact() {}
-
-Contact::~Contact() {}
 
 void Contact::setFirstName(const std::string &firstName) {
     this->firstName = firstName;

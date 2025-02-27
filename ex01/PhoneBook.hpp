@@ -11,11 +11,10 @@ private:
 
 public:
     PhoneBook();
-    ~PhoneBook();
-
     void addContact(const Contact &contact);
     void displayContacts() const;
     void displayContactDetails(int index) const;
+    int getContactCount() const;
 };
 
 #endif

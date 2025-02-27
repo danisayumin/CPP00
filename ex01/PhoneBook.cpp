@@ -4,8 +4,6 @@
 
 PhoneBook::PhoneBook() : contactCount(0), oldestContactIndex(0) {}
 
-PhoneBook::~PhoneBook() {}
-
 void PhoneBook::addContact(const Contact &contact) {
     if (contactCount < 8) {
         contacts[contactCount] = contact;
@@ -40,4 +38,8 @@ void PhoneBook::displayContactDetails(int index) const {
     } else {
         std::cout << "Invalid index!" << std::endl;
     }
+}
+
+int PhoneBook::getContactCount() const {
+    return contactCount;
 }
